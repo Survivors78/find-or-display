@@ -34,7 +34,7 @@ public class LoginActivity extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         task = String.valueOf(taskEditText.getText());
-                        if (!task.startsWith("www"))
+                        if (!task.startsWith("www") || !task.startsWith("http://") || !task.startsWith("https://"))
                             task = "www." + task;
                         if (!task.startsWith("http://") || !task.startsWith("https://"))
                             task = "https://" + task;
