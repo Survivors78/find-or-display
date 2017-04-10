@@ -6,8 +6,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -21,7 +19,6 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-import static android.R.attr.id;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -40,15 +37,6 @@ public class MainActivity extends AppCompatActivity {
         mTaskListView = (ListView) findViewById(R.id.text_list);
 
         updateUI();
-
-        /*FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.add_button);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });*/
     }
 
     @Override
@@ -70,7 +58,6 @@ public class MainActivity extends AppCompatActivity {
             final EditText taskEditText = new EditText(this);
             AlertDialog dialog = new AlertDialog.Builder(this)
                     .setTitle("Add a text")
-                    //.setMessage("What do you want to do next?")
                     .setView(taskEditText)
                     .setPositiveButton("Add", new DialogInterface.OnClickListener() {
                         @Override
